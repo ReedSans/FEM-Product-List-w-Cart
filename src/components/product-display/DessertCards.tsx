@@ -39,7 +39,7 @@ const DessertCards = () => {
             </button>
           )}
           {foundItem && (
-            <span className="py-2 px-5 absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%] bg-priColor border rounded-full flex justify-between w-36 text-[14px] font-medium">
+            <span className="py-2 px-5 absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%] bg-priColor border rounded-full flex justify-between w-36 text-[14px] text-white font-medium">
               <DecrementButton dessert={dessert} />
               {foundItem.quantity}
               <IncrementButton dessert={dessert} />

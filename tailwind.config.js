@@ -28,7 +28,7 @@ export default {
        secDark: "var(--clr-secondary-dark)",
        secDarker: "var(--clr-secondary-darker)",
 
-        // Beiges
+        // Others
         accent: "var(--clr-accent)",  /* cart & modal background */
         surface: "var(--clr-surface)",  /* background */
         sand: "var(--clr-sand)",

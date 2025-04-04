@@ -25,7 +25,7 @@ const App = () => {
   
   return (
     <main className=''>
-      <div className="container flex flex-col lg:flex-row gap-8 py-16">
+      <div className="container my-8 py-8 flex flex-col lg:flex-row gap-8 ">
         <ProductDisplaySection />
         <CartSection />
       </div>
