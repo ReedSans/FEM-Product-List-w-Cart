@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CarbonNeutral = () => {
   return (
     <div className='mb-4 py-4 bg-surface rounded-xl text-xs text-center'>
