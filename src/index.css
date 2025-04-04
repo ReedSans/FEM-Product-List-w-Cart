@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================================
+ * # SETTINGS
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- 
+ * ## colors
+ * ------------------------------------------------------------------- */
+ :root {
+  /* base colors */
+  --clr-primary: hsl(14, 86%, 42%);  /* card border & header, price text, cart icon & bg */
+  --clr-secondary: hsl(159, 69%, 38%);
+
+
+  /* variant colors */
+  --clr-primary-lighter: hsl(14, 86%, 62%);
+  --clr-primary-light: hsl(14, 86%, 52%);
+  --clr-primary-dark: hsl(14, 86%, 32%);
+  --clr-primary-darker: hsl(14, 86%, 22%);  /*  confirm btn hover */
+
+  --clr-secondary-lighter: hsl(159, 69%, 58%);
+  --clr-secondary-light: hsl(159, 69%, 48%);
+  --clr-secondary-dark: hsl(159, 69%, 28%);
+  --clr-secondary-darker: hsl(159, 69%, 18%);
+
+  
+  /* neutral colors */
+  --clr-accent: hsl(20, 50%, 98%);  /* cart & modal background */
+  --clr-surface: hsl(13, 31%, 94%);  /* background */
+  --clr-sand: hsl(14, 25%, 72%);  
+  --clr-terra-cotta: hsl(7, 20%, 60%);  /* category text */
+  --clr-clay: hsl(12, 20%, 44%);  /* border without hover */
+  --clr-burnt: hsl(14, 65%, 9%);  /* body text */
+
+
+  /* grey scale */
+  --clr-grey--900: #ffffff;  /* white color*/
+  --clr-grey--800: #f1f2f1;  
+  --clr-grey--700: #e9ebeb;  
+  --clr-grey--600: #dbdedd;  
+  --clr-grey--500: #afb2b1;  
+  --clr-grey--400: #838585; 
+  --clr-grey--300: #585958;  
+  --clr-grey--200: #2c2c2c;  
+  --clr-grey--100: #161616;  
+  --clr-grey--0: #000000;    /* black color*/
+}
+
+/* ------------------------------------------------------------------- 
+* ## fonts
+* ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+
+/* ------------------------------------------------------------------- 
+* ## Container 
+* ------------------------------------------------------------------- */  
+.container {
+  --max-width: 1180px;
+  --padding: 1.5rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  /* margin-inline: auto; */
+}
+
+@media (max-width: 768px){
+  .container {
+    width: calc(100% - 3rem);
+    padding: 0;
+  }
+}
+
+
+/* ===================================================================
+* # RESETS
+*
+*
+* ------------------------------------------------------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+scroll-behavior: smooth;
+}
+
+/*
+* html,
+* body {
+height: 100%;
+} */
+
+/* Set core body defaults */
+body {
+min-height: 100vh;  /* Remove this rule if you un-comment the one above*/
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+max-width: 100%;
+display: block;
+}
+
+/* svg {
+max-width: 100%;
+display: inline-block;
+} */
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+html:focus-within {
+  scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+
+
+/* ===================================================================
+* # GENERAL STYLING
+*
+*
+* ------------------------------------------------------------------- */
+
+body {
+  background-color: var(--clr-surface);
+  color: var(--clr-burnt);
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE & Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
